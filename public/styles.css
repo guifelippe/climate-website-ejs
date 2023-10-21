@@ -14,7 +14,7 @@ body {
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 
 .title {
@@ -28,7 +28,7 @@ body {
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 
 .form-label {
@@ -75,4 +75,11 @@ body {
 .weather #weather-image {
   display: block;
   margin: 0 auto;
-  max-width: 100%; }
+  max-width: 100px;
+  height: auto; }
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%; }
+  .form {
+    max-width: 90%; } }
