@@ -64,7 +64,49 @@ The Weather Forecast Website comprises of multiple routes that help you access w
 - **OpenWeatherMap API**: A third-party API that provides accurate and up-to-date weather information.
 - **Axios**: A library for making HTTP requests.
 
+## Prerequisites
+
+- [Node.js](https://nodejs.org/): The project is built on Node.js, so you need to have Node.js installed on your machine. You can download the latest LTS version of Node.js from the official website.
+- [npm](https://www.npmjs.com/) (Node Package Manager): npm is usually installed automatically when you install Node.js. It is used to manage project dependencies.
+
+## Installation
+
+Follow these steps to install and configure the Weather Forecast Website in your local environment:
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/guifelippe/climate-website-ejs.git
+
+2. **Access the project folder:**
+
+    ```bash
+    cd climate-website-ejs
+
+3. **Install dependencies:**
+
+    ```bash
+    npm install
+
+4. **Configure the environment variable:**
+- Create a .env file in the project root.
+- Inside the .env file, set your OpenWeatherMap API key as follows:
+
+    ```plaintext
+    OPENWEATHERMAP_API_KEY=YOUR_API_KEY
+
+5. **Start the server:**
+
+    ```bash
+    node app.js
+
+6. **Access the application:**
+
+Open your browser and go to http://localhost:3000 to launch the Weather Forecast Website.
+
+The application should now be running locally in your environment. You can start using it to check the weather forecast for your city or any other city you want.
+
 ## License
 
 This project is distributed under the MIT License. Please feel free to use, modify, and distribute it as needed. 
-See the [LICENSE](LICENSE.md) file for more details.
+See the [LICENSE](LICENSE) file for more details.
