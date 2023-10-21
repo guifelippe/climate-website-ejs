@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Weather Forecast</title>
-        <link rel="stylesheet" href="../public/styles.css">
-    </head>
-    <body>
-        <h1>Weather Forecast</h1>
-        <h2>Forecast for <%= weatherData.name %>, <%= weatherData.sys.country %></h2>
-        <p>Temperature: <%= (weatherData.main.temp - 273.15).toFixed(2) %>°C</p>
-        <p>Condition: <%= weatherData.weather[0].description %></p>
-    </body>
+<head>
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="weather">
+    <div class="container">
+        <h1 class="title">Weather Forecast</h1>
+        <h2 class="location">Forecast for <%= weatherData.name %>, <%= weatherData.sys.country %></h2>
+        <p class="temperature">Temperature: <%= (weatherData.main.temp - 273.15).toFixed(2) %>°C</p>
+        <p class="condition">Condition: <%= weatherData.weather[0].description %></p>
+        <img id="weather-image" alt="Condition">
+        <script>
+            function getWeatherImage(weatherCondition) {
+                switch (weatherCondition) {
+                    case 'Clear':
+                        return 'sun';
+                    case 'Clouds':
+                        return 'cloudy';
+                    case 'Rain':
+                    case 'Drizzle':
+                        return 'rain';
+                    case 'Snow':
+                        return 'snow';
+                    default:
+                        return 'cold';
+                }
+            }
+
+            var weatherCondition = "<%= weatherData.weather[0].main %>";
+            var weatherImageName = getWeatherImage(weatherCondition);
+            var weatherImageElement = document.getElementById('weather-image');
+            weatherImageElement.src = `/images/${weatherImageName}.png`;
+        </script>
+    </div>
+</body>
 </html>
