@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Forecast</title>
+        <link rel="stylesheet" href="../public/styles.css">
+    </head>
+    <body>
+        <h1>Weather Forecast</h1>
+        <h2>Forecast for <%= weatherData.name %>, <%= weatherData.sys.country %></h2>
+        <p>Temperature: <%= (weatherData.main.temp - 273.15).toFixed(2) %>°C</p>
+        <p>Condition: <%= weatherData.weather[0].description %></p>
+    </body>
+</html>
